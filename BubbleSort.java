@@ -25,28 +25,28 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         try {
-            // 1. Leer archivo (entrada.txt)
+            
             File file = new File("entrada.txt");
             Scanner sc = new Scanner(file);
 
-            // 2. Guardar los números del archivo en una lista
+            
             List<Integer> lista = new ArrayList<>();
             while (sc.hasNextInt()) {
                 lista.add(sc.nextInt());
             }
             sc.close();
 
-            // 3. Convertir lista a arreglo
+           
             int[] arr = lista.stream().mapToInt(i -> i).toArray();
 
-            // Mostrar antes
+            
             System.out.println("Antes:");
             for (int num : arr) System.out.print(num + " ");
 
-            // Ordenar
+            
             bubbleSort(arr);
 
-            // Mostrar después
+            
             System.out.println("\nDespués:");
             for (int num : arr) System.out.print(num + " ");
 
